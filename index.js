@@ -48,4 +48,13 @@ bot.on('message', msg => {
 	) {
 		bot.deleteMessage(msg.chat.id, msg.message_id);
 	}
+  var ad = '你好';
+	if (
+		msg.text
+			.toString()
+			.toLowerCase()
+			.indexOf(ad) === 0
+	) {
+		bot.sendMessage(msg.chat.id, "你好呀");
+	}
 });
